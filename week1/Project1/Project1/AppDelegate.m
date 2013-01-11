@@ -22,6 +22,27 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    //  Project1
+
+    // Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
+    
+    // Calculate dog years. Multiply current age by 7.
+    
+    float age = 3.5f;
+    
+    float dogyears = age * (float)7;
+    
+    NSLog(@"A 3.5-year-old dog is %f years old in dog years.", dogyears);
+    
+    
+    
+    
+    
+    
+    
+    
     return YES;
 }
 
