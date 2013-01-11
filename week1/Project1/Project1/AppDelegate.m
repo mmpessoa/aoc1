@@ -32,10 +32,64 @@
     
     float age = 3.5f;
     
-    float dogyears = age * (float)7;
+    int multiplier = 7;
     
-    NSLog(@"A 3.5-year-old dog is %f years old in dog years.", dogyears);
+    float dogyears = age * (float)multiplier;
     
+    
+    
+    NSLog(@"I am looking for a new puppy, but the choices are overwhelming.");
+    
+    
+    
+    NSLog(@"I found a dachshund who was %.1f old.", age);
+    
+    NSLog(@"A 3.5-year-old dog is %.1f years old in dog years.", dogyears);
+    
+
+    
+    //Perform a single for loop printing out values to the console
+    
+    for (int x=0; x <100; x++)
+    {
+        NSLog(@"Hello, Dalmatian number %d", x);
+    }
+    
+    
+    //Nested loop
+    
+    
+    
+    //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
+    //Use an if, else if and else check using any of the data types of your choice.
+
+    
+    
+    NSLog(@"I would prefer a small or medium sized female with a life expectancy of at least 10 years. One breed that I definitely do not want is the Boston Terrier. My budget is $600.");
+    
+    BOOL female = YES;
+    
+    float mybudget = 600.00f;
+
+    float puppyprice = 400.00f;
+
+    int lifeexpectancy = 12;
+    
+    NSString *puppysize = @"small";
+    
+    NSString *breedname = @"Boston Terrier";
+    
+
+    NSLog(@"The store manager told me that Boston Terriers are on sale for $400. They have a low-maintenace coat and their adult size is small. They have one female left from the litter. Should I buy this dog?");
+    
+    if (puppyprice < mybudget && lifeexpectancy > 10 && female == YES && breedname != "Boston Terrier" && puppysize == ("small" || "medium")){
+		NSLog(@"I can buy this puppy. It matches my wishlist for price, gender and size.");
+        
+	}
+    else
+        
+		NSLog(@"I should not buy this puppy. It does not fit my criteria for one or more of the following: price, breed, gender or size");
+
     
     
     
