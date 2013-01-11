@@ -25,10 +25,14 @@
     
     
     //  Project1
-
-    // Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
     
-    // Calculate dog years. Multiply current age by 7.
+    // 1. Create a new Empty Application Project
+
+    // 2. Create a variable using the float data type. Cast the float to an int and using NSLog, output both the initial float value as well as the int value.
+    
+    // Below is an update of my SDI project.
+    
+    //Calculate dog years. Multiply current age by 7.
     
     float age = 3.5f;
     
@@ -48,20 +52,46 @@
     
 
     
-    //Perform a single for loop printing out values to the console
+    //5. Perform a single for loop printing out values to the console
     
-    for (int x=0; x <100; x++)
+    for (int x=1; x <102; x++)
     {
         NSLog(@"Hello, Dalmatian number %d", x);
     }
     
     
-    //Nested loop
+    //6. Nested loop
     
     
+for (int petstores=5; petstores>=1; petstores--)
+    {
+NSLog(@"There are %d pet stores left to visit.", petstores);
+            
+    for(int puppies=3; puppies<=1; puppies++)
+{
+NSLog(@"There are %d puppies left to see in this store.", puppies);
+}
+NSLog(@"On to the next store.");
+}
     
-    //Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
-    //Use an if, else if and else check using any of the data types of your choice.
+    
+    //7. Perform a while loop that increments an int variable and outputs to the console.
+    
+    
+    int dogsinshelter = 0;
+    
+    while (dogsinshelter < 10)
+    {
+        //print out dogsinshelter value
+        NSLog(@"dogsinshelter = %d\n", dogsinshelter);
+        //increment dogsinshelter
+        dogsinshelter++;
+    }
+    
+    
+    //3. Perform an AND, OR comparison. Use float, int and BOOL types. BOOL values should be YES or NO and written in all caps.
+    //4. Use an if, else if and else check using any of the data types of your choice.
+    //Yep, this is where the code breaks, although I'm actually able to get "Build -- Succeeded."
 
     
     
@@ -90,11 +120,7 @@
         
 		NSLog(@"I should not buy this puppy. It does not fit my criteria for one or more of the following: price, breed, gender or size");
 
-    
-    
-    
-    
-    
+            
     
     
     return YES;
