@@ -16,6 +16,19 @@
 
 - (void)viewDidLoad
 {
+    
+    
+    self.view.backgroundColor = [UIColor orangeColor];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 620.0f, 20.0f)];
+                      if (title != nil)
+    {
+        title.backgroundColor = [UIColor redColor];
+        title.text = @"Cryptid Dictionary";
+    }
+                      
+                      [self.view addSubview: title];
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
