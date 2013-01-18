@@ -10,4 +10,14 @@
 
 @interface ViewController : UIViewController
 
+{
+    UILabel *title;
+    UILabel *author;
+    UILabel *name;
+    UILabel *published;
+    UILabel *pubDate;
+    UILabel *summary;
+    UILabel *summaryText;
+}
+
 @end
