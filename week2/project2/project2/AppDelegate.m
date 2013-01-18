@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  practice3
+//  project2
 //
 //  Created by Michelle Pessoa on 1/17/13.
 //  Copyright (c) 2013 Michelle Pessoa. All rights reserved.
@@ -8,11 +8,14 @@
 
 #import "AppDelegate.h"
 
+#import "ViewController.h"
+
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [_window release];
+    [_viewController release];
     [super dealloc];
 }
 
@@ -20,35 +23,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    NSLog(@"entered didFinishLaunchingWithOptions");
-    
-    NSString *string = [[NSString alloc] initWithString:@"hello"];
-    int lengthOfString = [string length];
-    
-    NSString *floatString = [[NSString alloc] initWithString:@"3.14159"];
-    float pi = [floatString floatValue];
-    NSMutableString *mutableString = [[NSMutableString alloc] initWithString:@"initialString"];
-    
-    NSString *lowerString = @"sdkjhfkjsdhfkjh";
-    NSString *upperString = [lowerString uppercaseString];
-    
-    [mutableString insertString:@"test" atIndex:4];
-    
-    //NSString *stringFormatted = [[NSString alloc] initWithFormat:@"this car has %d tires and is on fire", 4];
-    
-    NSString *stringFormatted = [[NSString alloc] initWithFormat:@"This car has %d tires and travels at %.1f mph", 4, 100.2];
-    
-    
-    
-    NSString *stringFormatted2 = [[NSString alloc] initWithFormat:@"The temperature today is %.1f degrees", 98.7];
-    
-    
-    //NSLog(@"This is my static string followed by %@", stringFormatted);
-
-    
     return YES;
 }
 
