@@ -18,6 +18,8 @@
     UILabel *pubDate;
     UILabel *summary;
     UILabel *summaryText;
+    UILabel *cryptidList;
+  //  UILabel *cryptids;
 }
 
 @end
