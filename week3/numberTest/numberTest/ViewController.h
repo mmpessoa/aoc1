@@ -14,7 +14,7 @@
     
 }
 
-- (void)printDebugInfo:(NSString*)debugString;
+- (void)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
 
 
 @end
