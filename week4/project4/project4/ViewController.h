@@ -13,7 +13,6 @@
 {
     UILabel *userLabel;
     UILabel *username;
-    UILabel *loginButton;
     UILabel *pleaseEnter;
 }
 

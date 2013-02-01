@@ -22,7 +22,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //User Name Label
-    userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 140.0f, 30.0f)];
+    userLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 90.0f, 30.0f)];
     if (userLabel != nil)
     {
         userLabel.text = @"Username:";
@@ -34,7 +34,7 @@
     
     
     //User Name Field
-    username = [[UILabel alloc] initWithFrame:CGRectMake(170.0f, 10.0f, 140.0f, 30.0f)];
+    username = [[UILabel alloc] initWithFrame:CGRectMake(110.0f, 10.0f, 200.0f, 30.0f)];
     if (username != nil)
     {
         username.backgroundColor = [UIColor colorWithRed:0.851 green:0.851 blue:0.953 alpha:1];
@@ -47,17 +47,14 @@
     
     
     
-    //Login Button
-    loginButton = [[UILabel alloc] initWithFrame:CGRectMake(170.0f, 50.0f, 140.0f, 30.0f)];
+    //Login Button 
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (loginButton != nil)
     {
-        //loginButton.backgroundColor = [UIColor brownColor];
-        loginButton.text = @"Login";
-        //loginButton.textColor = [UIColor blackColor];
-        loginButton.textAlignment = NSTextAlignmentCenter;
+        loginButton.frame = CGRectMake(220.0f, 50.0f, 90.0f, 30.0f);
+        [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        [self.view addSubview: loginButton];
     }
-    
-    [self.view addSubview: loginButton];
     
     
     
