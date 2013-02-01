@@ -84,11 +84,11 @@
     
     
     //Info Button
-    UIButton *showInfo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *showInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (showInfo != nil)
     {
-        showInfo.frame = CGRectMake(10.0f, 210.0f, 90.0f, 30.0f);
-        [showInfo setTitle:@"Show Info" forState:UIControlStateNormal];
+        //showInfo.backgroundColor = [UIColor colorWithRed:0.737 green:0.824 blue:0.933 alpha:1];
+        showInfo.frame = CGRectMake(10.0f, 210.0f, 25.0f, 25.0f);
         [self.view addSubview: showInfo];
     }
     
