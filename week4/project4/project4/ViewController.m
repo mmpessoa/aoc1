@@ -47,12 +47,14 @@
     
     
     
-    //Login Button 
+    //Login Button
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if (loginButton != nil)
     {
         loginButton.frame = CGRectMake(220.0f, 50.0f, 90.0f, 30.0f);
         [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        loginButton.tag = 0;
+        [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview: loginButton];
     }
     
@@ -78,6 +80,8 @@
     {
         showDate.frame = CGRectMake(10.0f, 170.0f, 90.0f, 30.0f);
         [showDate setTitle:@"Show Date" forState:UIControlStateNormal];
+        showDate.tag = 1;
+        [showDate addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview: showDate];
     }
     
@@ -87,12 +91,12 @@
     UIButton *showInfo = [UIButton buttonWithType:UIButtonTypeInfoDark];
     if (showInfo != nil)
     {
-        //showInfo.backgroundColor = [UIColor colorWithRed:0.737 green:0.824 blue:0.933 alpha:1];
         showInfo.frame = CGRectMake(10.0f, 210.0f, 25.0f, 25.0f);
+        showInfo.tag = 2;
         [self.view addSubview: showInfo];
     }
     
-
+    
     
     //Info text
     infoText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 250.0f, 300.0f, 60.0f)];
@@ -105,13 +109,38 @@
     }
     
     [self.view addSubview: infoText];
-
+    
     
     
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(void)onClick:(UIButton*)button
+{
+	if (button.tag == 0)
+	{
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login Button" message: @"You pressed button 0" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        if (alertView !=nil)
+        {
+            [alertView show];
+        }
+        
+	}
+	else if (button.tag == 1)
+	{
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Show Date Button" message: @"You pressed button 1" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        if (alertView !=nil)
+        {
+            [alertView show];
+        }
+        
+	}
+}
+
 
 - (void)didReceiveMemoryWarning
 {
