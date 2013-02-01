@@ -59,18 +59,38 @@
     
     
     //Please Enter Username
-    pleaseEnter = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 300.0f, 30.0f)];
+    pleaseEnter = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 300.0f, 60.0f)];
     if (pleaseEnter != nil)
     {
         pleaseEnter.backgroundColor = [UIColor colorWithRed:0.737 green:0.824 blue:0.933 alpha:1];
         pleaseEnter.text = @"Please Enter Username";
-        //pleaseEnter.textColor = [UIColor colorWithRed:0.878 green:0.933 blue:0.933 alpha:1];
+        pleaseEnter.numberOfLines = 3;
         pleaseEnter.textAlignment = NSTextAlignmentCenter;
     }
     
     [self.view addSubview: pleaseEnter];
     
     
+    
+    //Show Date Button
+    UIButton *showDate = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (showDate != nil)
+    {
+        showDate.frame = CGRectMake(10.0f, 170.0f, 90.0f, 30.0f);
+        [showDate setTitle:@"Show Date" forState:UIControlStateNormal];
+        [self.view addSubview: showDate];
+    }
+    
+    
+    
+    //Info Button
+    UIButton *showInfo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (showInfo != nil)
+    {
+        showInfo.frame = CGRectMake(10.0f, 210.0f, 90.0f, 30.0f);
+        [showInfo setTitle:@"Show Info" forState:UIControlStateNormal];
+        [self.view addSubview: showInfo];
+    }
     
 
     
