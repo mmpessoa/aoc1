@@ -14,6 +14,7 @@
     UILabel *userLabel;
     UILabel *username;
     UILabel *pleaseEnter;
+    UILabel *infoText;
 }
 
 @end

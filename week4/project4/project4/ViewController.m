@@ -94,6 +94,19 @@
     
 
     
+    //Info text
+    infoText = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 250.0f, 300.0f, 60.0f)];
+    if (infoText != nil)
+    {
+        infoText.backgroundColor = [UIColor colorWithRed:0.902 green:0.902 blue:0.98 alpha:1];
+        //infoText.text = @"This application was created by Michelle Pessoa.";
+        infoText.textColor = [UIColor colorWithRed:0 green:0 blue:0.2 alpha:1];
+        infoText.numberOfLines = 3;
+    }
+    
+    [self.view addSubview: infoText];
+
+    
     
     
     [super viewDidLoad];
