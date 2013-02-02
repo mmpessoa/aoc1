@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#define BUTTON_ZERO 0
+#define BUTTON_ONE 1
+
 @interface ViewController ()
 
 @end
@@ -53,7 +56,7 @@
     {
         loginButton.frame = CGRectMake(220.0f, 50.0f, 90.0f, 30.0f);
         [loginButton setTitle:@"Login" forState:UIControlStateNormal];
-        loginButton.tag = 0;
+        loginButton.tag = BUTTON_ZERO;
         [loginButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview: loginButton];
     }
@@ -80,7 +83,7 @@
     {
         showDate.frame = CGRectMake(10.0f, 170.0f, 90.0f, 30.0f);
         [showDate setTitle:@"Show Date" forState:UIControlStateNormal];
-        showDate.tag = 1;
+        showDate.tag = BUTTON_ONE;
         [showDate addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview: showDate];
     }
